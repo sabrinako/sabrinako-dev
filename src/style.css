@@ -1,11 +1,6 @@
 @font-face {
 	font-family: Lovelo;
 	src: url('Lovelo-Black.woff');
-};
-
-@font-face {
-	font-family: Pixer;
-	src: url('Pixer-Regular.woff2');
 }
 
 #navbar {
@@ -69,7 +64,7 @@
 #menu-options a {
 	text-decoration: none;
 	color: #3232ff;
-	padding: 10%;
+	padding: 10px;
 }
 
 .dropdown-item {
@@ -77,8 +72,11 @@
 }
 
 #web-body {
-	font-family: 'Pixer';
+	font-family: 'Nunito', sans-serif;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #bio {
@@ -102,28 +100,30 @@
 }
 
 #bio-text {
-	font-size: 5vw;
+	font-size: 6vw;
 	color: #0000FF;
 	text-align: center;
+	font-weight: 800;
 	text-shadow: 3px -1px #fff;
+	line-height: 100%;
+	width: 80%;
 }
 
 #more-info {
-	width: 100%;
+	width: 80%;
 	background-color: #e5e5ff;
-	font-size: 4vw;
-	padding: 15px 8px 15px 8px;
+	font-size: 5vw;
+	padding: 7vh 12vw 7vh 12vw;
 	text-align: center;
 	color: #0000FF;
 	position: relative;
-	left: -8px;
 	top: 20px;
 }
 
 @media only screen and (min-width: 768px) {
 	#surround-menu {
 		display: flex;
-		height: 80%;
+		height: 100%;
 		justify-content: center;
 		background-color: transparent;
 		font-size: 3vh;
@@ -140,13 +140,18 @@
 		display: none;
 	}
 
+	#more-info {
+		font-size: 2.8vw;
+	}
+
 	#bio {
 		flex-direction: row;
 	}
 
 	#bio-text {
-		margin-left: -5vw;
+		margin-left: 2vw;
 		text-align: left;
+		font-size: 4vw;
 	}
 
 }
