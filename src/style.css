@@ -1,0 +1,152 @@
+@font-face {
+	font-family: Lovelo;
+	src: url('Lovelo-Black.woff');
+};
+
+@font-face {
+	font-family: Pixer;
+	src: url('Pixer-Regular.woff2');
+}
+
+#navbar {
+	display: flex;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	font-family: 'Lovelo', Helvetica;
+	font-size: 1.5vh;
+	line-height: 100%;
+	background-color: #FFF5CC;
+	height: 10%;
+	z-index: 1;
+	padding: 5px;
+	align-items: center;
+}
+
+#home-logo {
+	width: 15%;
+	height: 100%;
+	padding-left: 3%;
+}
+
+#logo {
+	height: 100%;
+}
+
+#whole-menu {
+	height: calc(100% + 10px);
+	margin-left: auto;
+	margin-right: 10px;
+	position: relative;
+  	display: inline-block;
+}
+
+#burger-box {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+#surround-menu {
+	display: none;
+	height: 150%;
+	background-color: #ffde4c;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#menu-options {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	justify-content: space-between;
+	height: 90%;
+	width: 100%;
+}
+
+#menu-options a {
+	text-decoration: none;
+	color: #3232ff;
+	padding: 10%;
+}
+
+.dropdown-item {
+	height: 20%;
+}
+
+#web-body {
+	font-family: 'Pixer';
+	width: 100%;
+}
+
+#bio {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	padding-top: 15vh;
+	align-items: center;
+}
+
+#portrait {
+	padding-left: 5vw;
+}
+
+#headshot {
+	border-radius: 30vw;
+	height: 30vw;
+	width: 30vw;
+	box-shadow: -4vw -0.5vh #FFD100;
+}
+
+#bio-text {
+	font-size: 5vw;
+	color: #0000FF;
+	text-align: center;
+	text-shadow: 3px -1px #fff;
+}
+
+#more-info {
+	width: 100%;
+	background-color: #e5e5ff;
+	font-size: 4vw;
+	padding: 15px 8px 15px 8px;
+	text-align: center;
+	color: #0000FF;
+	position: relative;
+	left: -8px;
+	top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+	#surround-menu {
+		display: flex;
+		height: 80%;
+		justify-content: center;
+		background-color: transparent;
+		font-size: 3vh;
+	}
+
+	#menu-options {
+		height: 100%;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	#burger-box {
+		display: none;
+	}
+
+	#bio {
+		flex-direction: row;
+	}
+
+	#bio-text {
+		margin-left: -5vw;
+		text-align: left;
+	}
+
+}
