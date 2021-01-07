@@ -12,7 +12,39 @@
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<div id="navbar"></div>
+	<div id="navbar">
+		<div id="home-logo">
+			<a href="/"><img src="src/logo.png" id="logo"></a>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div id="whole-menu">
+			<div id="burger-box">
+				<button class="hamburger hamburger--squeeze" type="button" onclick="toggleMenu()" id="menu-burger">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+			</div>
+		</div>
+		<div id="surround-menu">
+			<div id="menu-options">
+				<a href="/">
+					<span class="dropdown-item" href="/">Home</span>
+				</a>
+				<a href="/about">
+					<span class="dropdown-item">About</span>
+				</a>
+				<a href="/contact">
+					<span class="dropdown-item">Contact</span>
+				</a>
+				<a href="/projects">
+					<span class="dropdown-item">Projects</span>
+				</a>
+			</div>
+		</div>
+	</div>
 		<div id="web-body">
 			<div id="bio">
 				<div id="portrait">
@@ -34,13 +66,15 @@
 				Currently living in Philadelphia with my cat, Milo.
 				<br>
 				In my spare time, I enjoy reading, crafting, finding the best pickles, and learning anything and everything.
+				<br>
+				<i>More to be added...</i>
 			</span>
 			</div>
 		</div>
 	</body>
-		<script> 
+<!-- 		<script> 
 		    $(function() {
 		      $("#navbar").load("navbar.html"); 
 		    });
-	    </script> 
+	    </script>  -->
 </html>
