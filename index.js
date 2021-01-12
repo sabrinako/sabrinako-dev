@@ -1,13 +1,13 @@
 function toggleMenu() {
 	var burger = document.getElementById("menu-burger");
-	var dropdown = document.getElementById("surround-menu");
+	var dropdown = document.getElementsByClassName("dropdown");
 
 	burger.classList.toggle("is-active")
 
-	if (dropdown.classList.contains("hide")) {
+	if (dropdown[0].classList.contains("visible")) {
 		console.log("HIDE")
-		dropdown.classList.remove("hide")
+		dropdown[0].classList.remove("visible")
 	} else {
-		dropdown.classList.add("hide")
+		dropdown[0].classList.add("visible")
 	}
 }

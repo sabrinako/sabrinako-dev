@@ -1,7 +1,91 @@
-@font-face {
-	font-family: Lovelo;
-	src: url('Lovelo-Black.woff');
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  height: 100%;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+  .hamburger.is-active:hover {
+    opacity: 0.7; }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #0000FF; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #0000FF;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+ /*
+  * Squeeze
+  */
+.hamburger--squeeze .hamburger-inner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--squeeze .hamburger-inner::before {
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+  .hamburger--squeeze .hamburger-inner::after {
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--squeeze.is-active .hamburger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--squeeze.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+  .hamburger--squeeze.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+@media only screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
 }
+
+/*-----------------------CUSTOM CSS BELOW-----------------------*/
 
 body {
 	min-width: fit-content;
@@ -14,8 +98,8 @@ body {
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	font-family: 'Lovelo', Helvetica;
-	font-size: 1.5vh;
+	font-family: 'Lato', sans-serif;
+	font-size: 2.5vh;
 	line-height: 100%;
 	background-color: #FFF5CC;
 	height: 10%;
@@ -37,54 +121,75 @@ body {
 	height: 100%;
 }
 
-#hamburger {
-	float: right;
-	display: inline-block;
-	padding-right: 3%;
-}
-
-/*#whole-menu {
+#mobile-menu {
 	margin-left: auto;
-	margin-right: 10px;
-	position: relative;
-  	display: inline-block;
-}
-
-#burger-box {
+	display: grid;
+	grid-template-columns: auto;
 	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
+	grid-template-rows: 100% 20vh;
+	grid-template-columns: 20vw;
+	justify-content: start;
 }
 
-#surround-menu {
-	display: flex;
-	position: absolute;
-	height: 150%;
-	background-color: #ffde4c;
-	flex-direction: column;
-	justify-content: center;
-	float: right;
+#menu-burger {
+	margin-right: 3vw;
+	margin-left: auto;
+	height: 100%;
+	width: 50px;
 }
 
-#menu-options {
-	display: flex;
-	flex-direction: column;
+.dropdown:hover {
+	cursor: pointer;
+}
+
+.dropdown {
+	visibility: hidden;
+	opacity: 0;
+	display: none;
+	background-color: #FFE680;
 	text-align: right;
-	justify-content: space-between;
-	height: 40vh;
-	width: 35vw;
+	flex-direction: column;
+	justify-content: space-around;
+	padding-right: 5px;
 }
 
-#menu-options a {
+.dropdown a {
 	text-decoration: none;
-	color: #3232ff;
-	padding: 10px;
+	color: #0000FF;
+	padding: 5px;
 }
 
-.dropdown-item {
-	height: 20%;
-}*/
+.dropdown:focus-within > .dropdown-item,
+.dropdown .visible {
+	visibility: visible;
+	opacity: 1;
+	display: flex;
+}
+
+.visible {
+	display: flex;
+	visibility: visible;
+	opacity: 1;
+}
+
+.mobile-dropdown {
+	list-style-type: none;
+	height: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+.mobile-dropdown li {
+	height: 30%;
+	line-height: 100%;
+	padding-top: 5px;
+}
+
+#desktop-menu {
+	visibility: hidden;
+	opacity: 0;
+	display: none;
+}
 
 #web-body {
 	font-family: 'Zilla Slab', sans-serif;
@@ -153,51 +258,6 @@ body {
 	font-size: 3.5vw;
 }
 
-ul {
-	margin-block-start: 0px;
-	height: 100%;
-	width: 100%;
-	padding-inline-start: 0px;
-	margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
-li {
-	height: 100%;
-	display: block;
-	transition-duration: 0.5s;
-}
-
-li:hover {
-  cursor: pointer;
-}
-
-ul li ul {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  transition: all 0.5s ease;
-/*  display: none;
-*/  background-color: purple;
-  height: 20vh;
-}
-
-ul li:hover > ul,
-ul li ul:hover {
-  visibility: visible;
-  opacity: 1;
-  display: flex;
-  margin-right: auto;
-  flex-direction: column;
-  font-size: 3vh;
-  justify-content: space-between;
-}
-
-ul li ul li {
-	display: flex;
-}
-
 @media only screen and (min-width: 768px) {
 	#surround-menu {
 		display: flex;
@@ -216,6 +276,21 @@ ul li ul li {
 
 	#burger-box {
 		display: none;
+	}
+
+	#desktop-menu {
+		visibility: visible;
+		opacity: 1;
+		display: flex;
+		height: 100%;
+		align-items: center;
+		font-size: 3vh;
+	}
+
+	#desktop-menu a {
+		padding: 10px;
+		text-decoration: none;
+		color: #0000FF;
 	}
 
 	#more-info {
