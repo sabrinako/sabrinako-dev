@@ -1,31 +1,24 @@
-<div id="home-logo">
-	<a href="/"><img src="src/logo.png" id="logo"></a>
-	<span></span>
-	<span></span>
-	<span></span>
-</div>
-<div id="whole-menu">
-	<div id="burger-box">
-		<button class="hamburger hamburger--squeeze" type="button" onclick="toggleMenu()" id="menu-burger">
-			<span class="hamburger-box">
-				<span class="hamburger-inner"></span>
-			</span>
-		</button>
-	</div>
-	<div id="surround-menu">
-		<div id="menu-options">
-			<a href="/">
-				<span class="dropdown-item" href="/">Home</span>
-			</a>
-			<a href="/about">
-				<span class="dropdown-item">About</span>
-			</a>
-			<a href="/contact">
-				<span class="dropdown-item">Contact</span>
-			</a>
-			<a href="/projects">
-				<span class="dropdown-item">Projects</span>
-			</a>
-		</div>
-	</div>
-</div>
+<nav id="navbar" role="navigation">
+    <div id="home-logo">
+        <a href="/"><img src="src/logo.png" id="logo"></a>
+    </div>
+    <div id="mobile-menu">
+        <button id="menu-burger" class="hamburger hamburger--squeeze" type="button" onclick="toggleMenu()" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <div class="dropdown" role="menu">
+            <ul class="mobile-dropdown">
+                <li role="button" tabindex="-1"><a href="/about">ABOUT</a></li>
+                <li role="button" tabindex="-1"><a href="/contact">CONTACT</a></li>
+                <li role="button" tabindex="-1"><a href="/projects">PROJECTS</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="desktop-menu">
+        <a href="/about">ABOUT</a>
+        <a href="/contact">CONTACT</a>
+        <a href="/projects">PROJECTS</a>
+    </div>
+</nav>
