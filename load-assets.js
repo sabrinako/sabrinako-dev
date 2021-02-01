@@ -1,5 +1,32 @@
-$(document).ready(function() {
-  $("#navbar-div").load("navbar.html");
+class NavBar extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <nav id="navbar" role="navigation">
+            <div id="home-btn">
+                <a href="/">Sabrina Hyunmi Ko</a>
+            </div>
+            <div id="menu">
+                <a href="/#about">About</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </nav>
+        `;
+      }
+}
 
-  $("head").load("head.html");
-});
+class Head extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="src/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;700&family=Fraunces:ital,wght@0,500;0,700;1,700&display=swap" rel="stylesheet">
+        <script src="navbar.js"></script>
+        `;
+    }
+}
+
+window.customElements.define('nav-bar', NavBar);
+window.customElements.define('head-content', Head)
