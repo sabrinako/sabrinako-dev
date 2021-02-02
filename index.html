@@ -4,18 +4,20 @@
         <title>Sabrina Hyunmi Ko</title>
         <script src="load-assets.js"></script>
         <script src="https://kit.fontawesome.com/77747ed39c.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
         <head-content></head-content>
     </head>
     <body>
     <nav-bar></nav-bar>
         <div id="web-body">
-            <div id="bio">
-                <div id="portrait-shadow">
+            <div id="bio" data-relative-input="true">
+                <div id="portrait-shadow" data-depth="0.9">
                     <div id="portrait">
                         <img src='src/sabrina.JPG' id="headshot">
                     </div>
                 </div>
-                <div class="header-text" id="bio-text">
+
+                <div class="header-text" id="bio-text" data-depth="0.2">
                     <span>
                         Hello!
                         <br> I'm Sabrina Ko (she/they),
@@ -25,6 +27,8 @@
                 </div>
             </div>
             <div id="about">
+                <hr>
+                <br>
                 <div class="big-text"><span>About</span></div>
                     I'm passionate about creating products that add meaningful value to the users' lives, uniting my arts background and problem solving skills to develop enjoyable code, and learning continously.
                     <p>
@@ -38,10 +42,14 @@
                     If you want to learn more about me, <a href="/about">click here</a>.
             </div>
             <div id="projects">
+                <hr>
+                <br>
                 <div class="big-text"><span>Projects</span></div>
                 <i>To be added...</i>
             </div>
             <div id="contact">
+                <hr>
+                <br>
                 <div class="big-text"><span>Contact Me</span></div>
                 You can find me on the Internet here:
                 <div class="links">

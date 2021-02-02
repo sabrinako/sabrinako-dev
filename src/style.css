@@ -11,14 +11,18 @@
 body {
 	min-width: fit-content;
 	margin: auto;
-}
-
-#web-body {
 	font-size: 3.5vw;
 	font-family: 'Asap', sans-serif;
 	text-align: center;
 }
 
+body a:focus {
+	text-decoration: var(--text-decor);
+}
+
+hr {
+	border: 1px solid var(--orange-accent);
+}
 #navbar {
 	display: flex;
 	width: 100%;
@@ -53,8 +57,8 @@ body {
 }
 
 #home-btn a {
-	font-size: 70%;
-	line-height: 135%;
+	font-size: 4vw;
+	line-height: 120%;
 	color: var(--secondary-green);
 }
 
@@ -63,12 +67,7 @@ body {
 	height: 100%;
 	align-items: center;
 	margin-left: auto;
-	font-size: 60%;
-}
-
-#web-body {
-	font-family: 'Asap', sans-serif;
-	width: 100%;
+	font-size: 3.7vw;
 }
 
 #bio {
@@ -78,7 +77,6 @@ body {
 	justify-content: center;
 	padding-top: 20vh;
 	align-items: center;
-	padding-bottom: 5vh;
 }
 
 #portrait-shadow {
@@ -102,7 +100,7 @@ body {
 
 .header-text {
 	font-family: 'Fraunces', serif;
-	font-size: 6vw;
+	font-size: 7vw;
 	color: var(--dark-green);
 	text-align: center;
 	font-weight: 700;
@@ -114,7 +112,7 @@ body {
 
 .big-text {
 	font-family: 'Fraunces', serif;
-	font-size: 4vw;
+	font-size: 6.5vw;
 	color: var(--dark-green);
 	text-align: center;
 	font-weight: 700;
@@ -174,6 +172,7 @@ legend {
 }
 
 legend span {
+	font-weight: 800;
 	background-color: var(--bg-green);
 }
 
@@ -221,20 +220,6 @@ form button {
 	box-shadow: none;
 }
 
-#title {
-	font-weight: 800;
-	font-size: 5vw;
-	line-height: 70%;
-}
-
-/* #about {
-	position: fixed;
-	top: 10%;
-	color: var(--dark-green);
-	font-size: 3vw;
-	padding: 40px;
-} */
-
 @media only screen and (min-width: 768px) {
 	#menu {
 		font-size: 90%;
@@ -242,6 +227,14 @@ form button {
 
 	#home-btn a {
 		font-size: 100%;
+	}
+
+	#web-body {
+		font-size: 24px;
+	}
+
+	.big-text {
+		font-size: 4.5vw;
 	}
 
 	#bio {
@@ -252,14 +245,6 @@ form button {
 		margin-left: 1vw;
 		text-align: left;
 		font-size: 5vw;
-	}
-
-	#title {
-		font-size: 2.5vw;
-	}
-
-	#web-body {
-		font-size: 24px;
 	}
 
 	#links {

@@ -3,7 +3,7 @@ class NavBar extends HTMLElement {
         this.innerHTML = `
         <nav id="navbar" role="navigation">
             <div id="home-btn">
-                <a href="/">Sabrina Hyunmi Ko</a>
+                <a href="/">SABRINA HYUNMI KO</a>
             </div>
             <div id="menu">
                 <a href="/#about">About</a>
