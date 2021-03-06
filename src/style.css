@@ -98,6 +98,7 @@ hr {
 	width: 30vw;
 	height: 30vw;
 	border-radius: 50%;
+	box-shadow: -10px 2px 10px 0 rgba(0,0,0,.2);
 }
 
 .header-text {
@@ -147,7 +148,7 @@ hr {
 }
 
 #about {
-	padding: 2vh 5vw 0vh 5vw;
+	padding: 2vh 5vw 5vh 5vw;
 	text-align: left;
 	color: var(--dark-green);
 	background-color: var(--bg-green);
@@ -161,8 +162,8 @@ hr {
 }
 
 #about img {
-	height: 20em;
-	width: 20em;
+	height: 30vw;
+	width: 30vw;
 }
 
 #about a {
