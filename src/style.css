@@ -5,7 +5,7 @@
 	--navbar-bg: #EBEEE5;
 	--orange-accent: #b95733;
 	--text-decor: underline wavy var(--orange-accent);
-	--padding: 15vh 5vw 15vh 5vw;
+	--padding: 10vh 5vw 10vh 5vw;
 }
 
 body {
@@ -14,6 +14,7 @@ body {
 	font-size: 3.5vw;
 	font-family: 'Asap', sans-serif;
 	text-align: center;
+	background-color: white;
 }
 
 body a:focus {
@@ -23,6 +24,39 @@ body a:focus {
 hr {
 	border: 1px solid var(--orange-accent);
 }
+
+.fade-up-bio {
+	opacity: 1;
+	animation-name: fadeInSlideUp;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1.25s;
+}
+
+.slide-up {
+	animation-name: slideUp;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1.25s;
+}
+
+@keyframes fadeInSlideUp {
+	0% {
+		opacity: 0;
+		margin-top: 40px;
+	}
+	100% {
+		opacity: 1;
+		margin-top: 0px;
+	}
+}
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 10%;
+}
+
 #navbar {
 	display: flex;
 	width: 100%;
@@ -75,9 +109,10 @@ hr {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	height: 35vh;
 	justify-content: center;
-	padding-top: 20vh;
-	padding-bottom: 15vh;
+	padding-top: 10vh;
+	padding-bottom: 20vh;
 	align-items: center;
 }
 
@@ -128,10 +163,12 @@ hr {
 
 #projects {
 	padding: var(--padding);
+	background-color: white;
 }
 
 #contact {
 	padding: var(--padding);
+	background-color: white;
 }
 
 .links {
@@ -174,6 +211,36 @@ hr {
 
 #about a:focus {
 	text-decoration: var(--text-decor);
+}
+
+.projects-grid {
+	display: grid;
+	width: 80vw;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	column-gap: 0.5rem;
+	row-gap: 0.5rem;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+.project-item {
+	text-align: left;
+}
+
+.project-title {
+	font-family: 'Fraunces', sans-serif;
+	font-size: 5vw;
+	font-weight: 700;
+	color: var(--secondary-green);
+}
+
+.project-item a {
+	text-decoration: none;
+	color: var(--dark-green);
+	background-color: var(--navbar-bg);
+	font-weight: 700;
 }
 
 form {
@@ -259,6 +326,7 @@ form button {
 
 	#bio {
 		flex-direction: row;
+		height: 45vh;
 	}
 
 	#bio-text {
