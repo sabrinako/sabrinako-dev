@@ -33,11 +33,12 @@ hr {
 	animation-duration: 1.25s;
 }
 
-.slide-up {
-	animation-name: slideUp;
+.slide-in {
+	opacity: 1;
+	animation-name: slideRight;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 1.25s;
+	animation-duration: 1.4s;
 }
 
 @keyframes fadeInSlideUp {
@@ -48,6 +49,17 @@ hr {
 	100% {
 		opacity: 1;
 		margin-top: 0px;
+	}
+}
+
+@keyframes slideRight {
+	0% {
+		opacity: 0;
+		margin-left: -1000px;
+	}
+	100% {
+		opacity: 1;
+		margin-left: 0;
 	}
 }
 
@@ -107,6 +119,7 @@ hr {
 
 #bio {
 	display: flex;
+	margin-top: 18vh;
 	flex-direction: column;
 	width: 100%;
 	height: 35vh;
@@ -216,8 +229,6 @@ hr {
 .projects-grid {
 	display: grid;
 	width: 80vw;
-	margin-left: auto;
-	margin-right: auto;
 	margin-top: 20px;
 	column-gap: 0.5rem;
 	row-gap: 0.5rem;
@@ -231,7 +242,7 @@ hr {
 
 .project-title {
 	font-family: 'Fraunces', sans-serif;
-	font-size: 5vw;
+	font-size: 3.5vw;
 	font-weight: 700;
 	color: var(--secondary-green);
 }
