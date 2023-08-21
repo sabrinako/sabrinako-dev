@@ -1,101 +1,55 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sabrina Hyunmi Ko</title>
-        <script src="load-assets.js"></script>
-        <script src="https://kit.fontawesome.com/77747ed39c.js" crossorigin="anonymous"></script>
+        <title>sabrina hyunmi ko</title>
         <link rel="stylesheet" href="src/style.css">
         <link rel="shortcut icon" type="image/x-icon" href="src/favicon.ico"/>
-        <head-content></head-content>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-    <nav-bar></nav-bar>
-        <div id="web-body">
-            <div id="bio">
-                <div id="portrait-shadow" class="fade-up-bio">
-                    <div id="portrait">
-                        <img src='src/sabrina.JPG' id="headshot" alt="A woman smiles as she holds her tabby cat up for the camera">
-                    </div>
-                </div>
-
-                <div class="header-text fade-up-bio" id="bio-text">
-                    <span>
-                        Hello!
-                        <br> I'm Sabrina Ko (she/they),
-                        <br>a front end developer
-                        <br>working in health-tech.
-                    </span>
-                </div>
-            </div>
-            <div id="about">
-                <div class="big-text"><span>About</span></div>
-                <div id="about-wrapper">
-                    <div>
-                        I'm passionate about learning continously, creating products that add meaningful value to the users' lives, and uniting my arts background and critical problem solving skills to develop enjoyable code. My hope is my work as a software engineer brings about meaningful social change, and is accessible to all who need it.
-                        <p>
-                            Currently, I'm a software engineer at <a href="www.healthverity.com">HealthVerity</a>.
-                        </p>
-                        <p>
-                            In my spare time, I enjoy reading, crafting, and finding the best pickles. I live in Philadelphia with my cat, Milo.
-                        </p>
-                        <p>
-                            If you'd like to learn more about my professional history, <a href="/src/Resume.pdf">click here for my resume</a>.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="src/wfh.gif" alt="Animated illustration of person wearing a beanie swinging their leg idly as they sit behind a computer">
-                    </div>
-                </div>
-            </div>
-            <div id="projects">
-                <div class="big-text"><span>Projects</span></div>
-                <div class="projects-grid">
-                    <div class="project-item">
-                        <span class="project-title">Color Journal</span> (<a href="https://github.com/sabrinako/color-journal">Github</a>)
-                        <br>
-                        - Created React app with Firebase backend for logging moods through colors with optional text notes
-                        <br>
-                        - Set up email authentication and database rules to restrict access to data to only show information related to logged in user
-                    </div>
-                    <div class="project-item">
-                        <span class="project-title">Alarm Watch</span> (<a href="https://github.com/sabrinako/alarm_twatch">Github</a>)
-                        <br>
-                        - Developed C++ application for ESP32 microcontroller within a LilyGO TTGO T-Watch to create a smartwatch with multi-alarm functionality, wifi RTC sync, and power management
-                        <br>
-                        - Deployed using PlatformIO plugin in VSCode, prototyped in Arduino IDE
-                    </div>
-                    <div class="project-item">
-                        <span class="project-title">Portfolio Website</span> (<a href="https://github.com/sabrinako/sabrinako-dev">Github</a>)
-                        <br>
-                        - Researched standard practices for accessible website design and implemented visually accessible color palette and site hierarchy structure
-                        <br>
-                        - Utilized vanilla HTML/CSS/Javascript to experiment with building without frameworks and libraries
-                    </div>
-                </div>
-            </div>
-            <div id="contact">
-                <div class="big-text"><span>Contact Me</span></div>
-                You can find me on the Internet here:
-                <div class="links">
-                    <a href="https://github.com/sabrinako"><i class="fab fa-github-alt"></i> Github</a>
-                    <a href="https://www.linkedin.com/in/sabrina-ko/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://twitter.com/sabrinahyunmi"><i class="fas fa-hashtag"></i> Twitter</a>
-                </div>
-                <p>
-                    * * *
-                </p>
-                Fill out the form below if you'd like to get in touch!
-                <p></p>
-                <form name="contact-form" method="POST" data-netlify="true">
-                        <legend><span>Message Me</span></legend>
-                        <label>Email: <input type="email" name="email" /></label>
-                        <br><label>Message:</label>
-                        <textarea name="message" rows="8"></textarea>
-                        <p>
-                        <button type="submit">Submit</button>
-                        </p>
-                </form>
-            </div>
+        <h1>
+            # sabrinako.dev
+        </h1>
+        <div>
+            <h2>
+                ## about
+            </h2>
+            <span>
+                Hello! I'm Sabrina Ko (<i>*she/they*</i>), a frontend engineer with full-stack experience.
+            </span>
+            <span>
+                I'm passionate about learning continously, creating products that add meaningful value to the users' lives, and uniting my arts background and critical problem solving skills to develop enjoyable code. My hope is my work as a software engineer brings about positive change, and is accessible to all who need it.
+            </span>
+            <span>
+                Outside of tech, I enjoy gardening, crafting, and exploring the city for the best chai lattes. I live in Philadelphia with my partner and 3 cats (Milo, Sophie, and Maxey).
+            </span>
+        </div>
+        <div>
+            <h2>
+                ## links
+            </h2>
+            <ul>
+                <li>
+                    <a href="https://github.com/sabrinako">github</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/sabrina-ko/">linkedin</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/sabrinahyunmi">twitter</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2>## contact me!</h2>
+            <form name="contact-form" method="POST" data-netlify="true">
+                    <legend><span>get in touch</span></legend>
+                    <label>your email: <input type="email" name="email" /></label>
+                    <br><label>your message:</label>
+                    <textarea name="message" rows="8"></textarea>
+                    <button type="submit">Submit</button>
+            </form>
         </div>
     </body>
 </html>
