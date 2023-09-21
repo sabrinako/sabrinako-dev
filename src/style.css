@@ -3,84 +3,240 @@
   --background: #fffef7;
 }
 
-body {
-  background-color: var(--background);
-  font-family: 'Fira Code', monospace;
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
+@keyframes slide {
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    background-color: var(--green);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@font-face {
+  font-family: 'Leiko';
+  src: url('src/Leiko.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inclusive Sans';
+  src: url('src/InclusiveSans-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('src/SpaceGrotesk-Bold.otf') format('opentype');
+  font-weight:bold;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--background);
+  font-family: 'Inclusive Sans', monospace;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+.cover {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: var(--background);
+  z-index: 100;
+  animation: slide 1.6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.body {
+  animation: fadeIn 2.5s;
+  height: 100%;
+  width: 100%;
+  gap: 0.5em;
+  font-size: smaller;
+}
 
 h1, h2 {
-  font-family: 'Fira Code', monospace;
+  font-family: 'Space Grotesk', monospace;
   margin: 0;
   color: var(--green);
 }
 
 h1 {
   font-weight: 700;
+  line-height: 0.8;
 }
 
 h2 {
   font-weight: 600;
 }
 
-.section {
-  border: 1px solid var(--green);
-  border-radius: 10px;
-  padding: 0.5em;
-  margin: 0.5em;
-  margin-bottom: 0.8em;
-  width: 45em;
-
-  > span {
-    margin-left: 20px;
-    display: block;
-    font-size: 13pt;
-    margin-bottom: 0.4em;
+.blurb {
+  > a {
+    color: var(--green);
+    font-family: 'Space Grotesk';
   }
 }
 
-ul {
-  margin: 0;
-  margin-left: 20px;
-  list-style: '-> ';
+.links {
+  display: flex;
+  flex-direction: column;
+
+  > a {
+    font-family: 'Space Grotesk';
+    text-decoration: none;
+    color: var(--green);
+    line-height: 1;
+  }
+
+  > a:hover {
+    text-decoration: line-through;
+  }
 }
 
-form {
-	padding-left: 25px;
-  padding-right: 25px;
-	text-align: left;
+.about {
+  animation: fadeIn 2.5s;
+  margin: 0.5em;
+  gap: 0.5em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+
+  > a {
+    color: var(--green);
+    font-family: 'Space Grotesk';
+    text-decoration: none;
+  }
 }
 
-form label {
+.contact {
+  animation: fadeIn 2.5s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: 0.5em;
+  gap: 0.5em;
+  
+  > span {
+    > a {
+      color: var(--green);
+      text-decoration: none;
+    }
+  }
+
+  > a {
+    color: var(--green);
+    font-family: 'Space Grotesk';
+  }
+}
+
+.home-nav {
   color: var(--green);
-  font-weight: 600;
+  text-decoration: none;
 }
 
-form input {
-  width: 100%;
-  border-radius: 10px;
-  border: solid var(--green) 1px;
-  font-family: 'Fira Code', monospace;
-  background-color: var(--background);
-  padding: 5px;
+.slide-up {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 100;
+  animation: slideUp 1.6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-form textarea {
-  width: 100%;
-  border-radius: 10px;
-  border: solid var(--green) 1px;
-  font-family: 'Fira Code', monospace;
-  background-color: var(--background);
-  padding: 5px;
+@media screen and (min-width: 1024px) {
+  .body {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "blurb links";
+    grid-template-columns: 30% 70%;
+
+    > div {
+      margin: 0.5em;
+    }
+  }
+
+  h1 {
+    font-size: 48pt;
+  }
+
+  .blurb {
+    text-align: right;
+  }
+
+  .links {
+    > a {
+      font-size: 15vh;
+    }
+  }
 }
 
-button {
-  border-radius: 10px;
-  border: none;
-  background-color: var(--green);
-  color: var(--background);
-  font-family: 'Fira Code', monospace;
-  font-weight: 700;
-  padding: 0.5em 1.5em;
-  margin-top: 0.25em;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .body {
+    font-size: 3.5vw;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+    > div {
+      margin: 1em;
+    }
+  }
+
+  h1 {
+    font-size: 9vw;
+  }
+  .links {
+    padding-top: 3vh;
+
+    > a {
+      font-size: 20vw;
+      line-height: 0.9;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+
+    > div {
+      margin: 0.5em;
+    }
+  }
+
+  h1 {
+    font-size: 9vw;
+  }
+
+  .links {
+    padding-top: 3vh;
+
+    > a {
+      font-size: 20vw;
+      line-height: 0.9;
+    }
+  }
 }
